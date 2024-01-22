@@ -65,7 +65,7 @@ listen my-haproxy-http-stats
   stats uri /server-status
 EOF
 
-apt-get install -y systemd haproxy
+apt-get install -y systemctl haproxy
 
 if [ ! -f "/etc/haproxy/haproxy.cfg.orig" ]
 then
