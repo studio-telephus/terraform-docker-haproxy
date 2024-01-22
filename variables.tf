@@ -4,7 +4,6 @@ variable "name" {
 
 variable "image" {
   type    = string
-  default = "debian:bookworm"
 }
 
 variable "networks" {
