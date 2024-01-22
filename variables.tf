@@ -59,3 +59,8 @@ variable "stats_auth_password" {
   type      = string
   sensitive = true
 }
+
+variable "restart" {
+  type    = string
+  default = "unless-stopped"
+}

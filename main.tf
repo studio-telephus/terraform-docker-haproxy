@@ -29,4 +29,5 @@ module "container_haproxy" {
     },
     var.environment
   )
+  restart = var.restart
 }
