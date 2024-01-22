@@ -17,7 +17,6 @@ module "container_haproxy" {
   image                  = var.image
   networks               = var.networks
   mount_dirs             = concat(["${path.module}/filesystem", ], var.mount_dirs)
-  entrypoint             = ["/usr/sbin/init"]
   exec_enabled           = var.exec_enabled
   exec                   = var.exec
   local_exec_interpreter = var.local_exec_interpreter
