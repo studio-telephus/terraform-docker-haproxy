@@ -31,7 +31,7 @@ cat >/tmp/my-haproxy-tcp-passthrough.cfg.append <<EOF
 listen my-haproxy-tcp-passthrough
   bind :$BIND_PORT
   mode tcp
-  option log-health-checks
+  option tcplog
   timeout client 3h
   timeout server 3h
   $server_node_lines
@@ -79,6 +79,7 @@ cat \
   /tmp/my-haproxy-http-stats.cfg.append \
   > /etc/haproxy/haproxy.cfg
 
+service haproxy start
 
-systemctl restart haproxy
+
 echo "HAProxy is ready!"
