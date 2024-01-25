@@ -15,8 +15,8 @@ module "container_haproxy" {
   source                 = "github.com/studio-telephus/terraform-docker-container.git?ref=main"
   name                   = var.name
   image                  = var.image
-  networks_advanced               = var.networks_advanced
-  upload_dirs             = concat(["${path.module}/filesystem", ], var.upload_dirs)
+  networks_advanced      = var.networks_advanced
+  upload_dirs            = concat(["${path.module}/filesystem", ], var.upload_dirs)
   exec_enabled           = var.exec_enabled
   exec                   = var.exec
   local_exec_interpreter = var.local_exec_interpreter
