@@ -6,15 +6,11 @@ variable "image" {
   type = string
 }
 
-variable "networks" {
-  description = "Docker networks to join."
-  type = list(object({
-    name         = string
-    ipv4_address = string
-  }))
+variable "networks_advanced" {
+  type = list(any)
 }
 
-variable "mount_dirs" {
+variable "upload_dirs" {
   type    = list(string)
   default = []
 }
