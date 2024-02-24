@@ -12,7 +12,7 @@ resource "null_resource" "container_environment" {
 }
 
 module "container_haproxy" {
-  source                 = "github.com/studio-telephus/terraform-docker-container.git?ref=main"
+  source                 = "github.com/studio-telephus/terraform-docker-container.git?ref=1.0.3"
   name                   = var.name
   image                  = var.image
   networks_advanced      = var.networks_advanced
